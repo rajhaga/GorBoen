@@ -51,8 +51,8 @@
                             <div class="header-info-left">
                                 <ul>                          
                                     <li>needhelp@gotrip.com</li>
-                                    <li>666 569 025077</li>
-                                    <li>broklyn street new york</li>
+                                    <li>66025077</li>
+                                    <li></li>
                                 </ul>
                             </div>
                         </div>
