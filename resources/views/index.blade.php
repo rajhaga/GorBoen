@@ -26,16 +26,6 @@
                                     <div class="input-form mb-30">
                                         <input type="text" placeholder="What garden do you want to visit??">
                                     </div>
-                                    <div class="select-form mb-30">
-                                        <div class="select-itms">
-                                            <select name="select" id="select1">
-                                                <option value="">area</option>
-                                                <option value="">Services-1</option>
-                                                <option value="">Services-2</option>
-                                                <option value="">Services-3</option>
-                                            </select>
-                                        </div>
-                                    </div>
                                     <div class="search-form mb-30">
                                         <a href="#">Search</a>
                                     </div>	
