@@ -17,12 +17,32 @@ class PostController extends Controller
             
     ]
     );
-
     }
+
+    Public function home(){
+
+        return view('index',[
+            "title" => "index",
+            "content" => Post::all(),
+            "wisata" => Post::allwisata(),
+            
+    ]);
+    }
+
+    Public function allkebun(){
+
+        return view('packages',[
+            "title" => "Wisata",
+            "wisata" => Post::allwisata(),
+            
+    ]);
+    }
+
+    
 
     public function blogdetail($_id){
         
-        return view('detailblog', [
+        return view('single-blog', [
             "title" => "Detail Blog",
             "post" => Post::find($_id)
         ]);

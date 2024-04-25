@@ -54,19 +54,10 @@
                                 <div class="main-menu f-right d-none d-lg-block">
                                     <nav>               
                                         <ul id="navigation">                                                                                                                                     
-                                            <li><a href="/home">Home</a></li>
+                                            <li><a href="/">Home</a></li>
                                             <li><a href="/aboutus">About US</a></li>
-                                            <li><a href="/package">Package</a></li>
+                                            <li><a href="/package">Kebun</a></li>
                                             <li><a href="/blog">Blog</a>
-                                                <ul class="submenu">
-                                                    <li><a href="/blog">Blog</a></li>
-                                                    <li><a href="/package">Blog Details</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Pages</a>
-                                                <ul class="submenu">
-                                                    <li><a href="elements.html">Element</a></li>
-                                                </ul>
                                             </li>
                                             <li><a href="/contact">Contact Us</a></li>
                                         </ul>

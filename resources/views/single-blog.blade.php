@@ -1,9 +1,7 @@
 @extends('layouts.Header')
 
 @section('main')
-   <!-- slider Area Start-->
    <div class="slider-area ">
-      <!-- Mobile Menu -->
       <div class="single-slider slider-height2 d-flex align-items-center" data-background="assets/img/hero/contact_hero.jpg">
           <div class="container">
               <div class="row">
@@ -16,8 +14,6 @@
           </div>
       </div>
    </div>
-   <!-- slider Area End-->
-   <!--================Blog Area =================-->
    <section class="blog_area single-post-area section-padding">
       <div class="container">
          <div class="row">

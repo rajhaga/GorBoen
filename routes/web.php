@@ -19,11 +19,13 @@ Route::get('/package', function () {
     return view('packages');
 });
 
-Route::get('/blog', function () {
-    return view('blog');
-});
+Route::get('/package',[ PostController::class,'allkebun']);
+
+Route::get('content/{_id}', [PostController::class,'blogdetail']);
 
 Route::get('/blog', [ PostController ::class,'index']);
+
+Route::get('/', [ PostController ::class,'home']);
 
 Route::get('/contact', function () {
     return view('contact');

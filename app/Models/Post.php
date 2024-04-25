@@ -22,6 +22,18 @@ class Post
         }
     }
 
+    public static function allwisata(){
+        $response = Http::get('https://ap-southeast-1.aws.data.mongodb-api.com/app/application-0-pkmqdbd/endpoint/getallwisata');
+
+        if ($response->successful()) {
+            return $response->json();
+        } else {
+            return [];
+        }
+    }
+
+
+
     public static function find($_id){
 
         $databaseblog = static::all();
