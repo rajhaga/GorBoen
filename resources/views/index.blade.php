@@ -40,9 +40,11 @@
 
          <!-- Our Services End -->
         <!-- Favourite Places Start -->
+
         <div class="favourite-place place-padding">
             <div class="container">
                 <!-- Section Tittle -->
+
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-tittle text-center">
@@ -51,14 +53,15 @@
                         </div>
                     </div>
                 </div>
-                @foreach ($wisata as $item)
-                    
+
                 <div class="row">
+                    @foreach ($wisata as $item)
+
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="single-place mb-30">
                             <div class="place-img">
                                 <?php             
-                                    $imageSrc = $item['gambar'];
+                                    $imageSrc = 'data:image/png;base64,'. $item['gambar'];;
                                 ?>
                                 <img src="{{ $imageSrc }}" alt="">
                             </div>
@@ -76,13 +79,12 @@
                             </div>
                         </div>
                     </div>
-                    
-                    @endforeach
+                    @endforeach  
 
-                    
-                </div>
+                </div> 
             </div>
         </div>
+
         <!-- Favourite Places End -->
         <!-- Video Start Arera -->
         <div class="video-area video-bg pt-200 pb-200"  data-background="assets/img/service/video-bg.jpg">
@@ -190,8 +192,7 @@
                                 </div>
                             </div>
                             <div class="blog-date text-center">
-                                <span>{{ $item["tanggal"] ? $item["tanggal"] : '' }}</span>
-                                <p>{{ $item["tanggal"] ? $item["tanggal"] : '' }}</p>
+                                    <span>{{ Carbon\Carbon::parse($item['tanggal'])->format('M j') }}</span>                                
                             </div>
                         </div>
                     </div>

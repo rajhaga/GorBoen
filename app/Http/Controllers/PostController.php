@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
+use Illuminate\Support\Str;
+
 
 class PostController extends Controller
 {
@@ -30,16 +32,15 @@ class PostController extends Controller
     }
 
     Public function allkebun(){
-
+            
         return view('packages',[
             "title" => "Wisata",
             "wisata" => Post::allwisata(),
             
             
+            
     ]);
     }
-
-    
 
     public function blogdetail($_id){
         
@@ -55,6 +56,13 @@ class PostController extends Controller
             "post" => Post::allwisata($_id)
         ]);
 
+    }
+
+    public function map(){
+        
+        return view('map', [
+            
+        ]);
     }
 
     /**

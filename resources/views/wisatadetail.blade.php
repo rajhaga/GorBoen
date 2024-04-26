@@ -24,8 +24,7 @@
                      <img class="img-fluid" src="/assets/img/blog/single_blog_1.png" alt="">
                   </div>
                   <div class="blog_details">
-                     <h2>Second divided from form fish beast made every of seas
-                        all gathered us saying he our
+                     <h2>Kebun raya Bogor
                      </h2>
                      <ul class="blog-info-link mt-3 mb-4">
                         <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>

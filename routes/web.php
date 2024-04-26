@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Str;
+
 
 Route::get('/', function () {
     return view('index');
@@ -27,6 +29,7 @@ Route::get('wisata/{_id}', [PostController::class,'wisatadetail']);
 Route::get('/blog', [ PostController ::class,'index']);
 
 Route::get('/', [ PostController ::class,'home']);
+Route::get('/map', [ PostController ::class,'map']);
 
 Route::get('/contact', function () {
     return view('contact');

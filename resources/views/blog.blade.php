@@ -29,9 +29,12 @@
 
                         <article class="blog_item">
                             <div class="blog_item_img">
-                                <img class="card-img rounded-0" src="assets/img/blog/single_blog_1.png" alt="">
-                                <a href="#" class="blog_item_date">
-                                    <h3>{{ $item["tanggal"] ? $item["tanggal"] : '' }}</h3>
+                                <?php             
+                                $imageSrc = 'data:image/png;base64,'. $item['gambar'];;
+                            ?>
+                            <img src="{{ $imageSrc }}" alt="">                                
+                            <a href="#" class="blog_item_date">
+                                    <span>{{ Carbon\Carbon::parse($item['tanggal'])->format('F j') }}</span>
                                     <p>Jan</p>
                                 </a>
                             </div>
@@ -40,18 +43,12 @@
                                 <a class="d-inline-block" href="/content/{{ $item['_id'] }}">
                                     <h2>{{$item["judul"] ? $item["judul"] : '' }}</h2>
                                 </a>
-                                <p>{{ $item["detail_berita"] ? $item["detail_berita"] : '' }}</p>
+                                <p>{{ substr($item['detail_berita'], 0, 300) }}...</p>
                                 
                             </div>
                         </article>
 
                         @endforeach
-                        
-
-                        
-
-                        
-
                         <nav class="blog-pagination justify-content-center d-flex">
                             <ul class="pagination">
                                 <li class="page-item">

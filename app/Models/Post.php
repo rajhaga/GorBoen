@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Str;
+
 
 class Post 
 {
@@ -20,6 +22,8 @@ class Post
             // Jika terjadi kesalahan, kembalikan array kosong
             return [];
         }
+
+        
     }
 
     public static function allwisata(){

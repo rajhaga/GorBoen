@@ -21,6 +21,7 @@
             <link rel="stylesheet" href="/assets/css/slick.css">
             <link rel="stylesheet" href="/assets/css/nice-select.css">
             <link rel="stylesheet" href="/assets/css/style.css">
+            <link rel="stylesheet" href="/assets/css/custom.css">
    </head>
 
    <body>
@@ -57,8 +58,8 @@
                                             <li><a href="/">Home</a></li>
                                             <li><a href="/aboutus">About US</a></li>
                                             <li><a href="/package">Kebun</a></li>
-                                            <li><a href="/blog">Blog</a>
-                                            </li>
+                                            <li><a href="/blog">Blog</a></li>
+                                            <li><a href="/map">Map</a></li>
                                             <li><a href="/contact">Contact Us</a></li>
                                         </ul>
                                     </nav>
