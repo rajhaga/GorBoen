@@ -57,7 +57,10 @@
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="single-place mb-30">
                             <div class="place-img">
-                                <img src="assets/img/service/services1.jpg" alt="">
+                                <?php             
+                                    $imageSrc = $item['gambar'];
+                                ?>
+                                <img src="{{ $imageSrc }}" alt="">
                             </div>
                             <div class="place-cap">
                                 <div class="place-cap-top">

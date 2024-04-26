@@ -35,6 +35,7 @@ class PostController extends Controller
             "title" => "Wisata",
             "wisata" => Post::allwisata(),
             
+            
     ]);
     }
 
@@ -42,9 +43,16 @@ class PostController extends Controller
 
     public function blogdetail($_id){
         
-        return view('single-blog', [
-            "title" => "Detail Blog",
+        return view('blogdetail', [
             "post" => Post::find($_id)
+        ]);
+
+    }
+
+    public function wisatadetail($_id){
+        
+        return view('wisatadetail', [
+            "post" => Post::allwisata($_id)
         ]);
 
     }

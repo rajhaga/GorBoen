@@ -22,6 +22,7 @@ Route::get('/package', function () {
 Route::get('/package',[ PostController::class,'allkebun']);
 
 Route::get('content/{_id}', [PostController::class,'blogdetail']);
+Route::get('wisata/{_id}', [PostController::class,'wisatadetail']);
 
 Route::get('/blog', [ PostController ::class,'index']);
 
