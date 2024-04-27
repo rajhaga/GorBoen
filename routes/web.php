@@ -34,3 +34,5 @@ Route::get('/map', [ PostController ::class,'map']);
 Route::get('/contact', function () {
     return view('contact');
 });
+
+Route::get('/search', [PostController::class, 'search'])->name('search');

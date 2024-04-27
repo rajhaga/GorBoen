@@ -21,18 +21,34 @@
                         <!-- Search Box -->
                         <div class="row">
                             <div class="col-xl-12">
-                                <!-- form -->
-                                <form action="#" class="search-box">
+                                <!-- Formulir pencarian -->
+                                <form action="{{ route('search') }}" method="GET" class="search-box">
                                     <div class="input-form mb-30">
-                                        <input type="text" placeholder="What garden do you want to visit??">
+                                        <input type="text" class="form-control" placeholder="What garden do you want to visit?" name="search">
                                     </div>
                                     <div class="search-form mb-30">
-                                        <a href="#">Search</a>
-                                    </div>	
-                                </form>	
+                                        <button type="submit" class="btn btn-primary">Search</button>
+                                    </div>
+                                </form>
+                                <!-- Hasil pencarian -->
+                                <div class="search-results" >
+                                    @if (!empty($results))
+                                        <ul>
+                                            @foreach ($results as $result)
+                                                <li>{{ $result['judul'] }}</li>
+                                            @endforeach
+                                        </ul>
+                                    @else
+                                        <p>Tidak ada hasil pencarian.</p>
+                                    @endif
+                                </div>
+                                
                             </div>
                         </div>
+                        
                     </div>
+                    
+                    
                 </div>
             </div>
         </div>
@@ -192,7 +208,9 @@
                                 </div>
                             </div>
                             <div class="blog-date text-center">
-                                    <span>{{ Carbon\Carbon::parse($item['tanggal'])->format('M j') }}</span>                                
+                                <span>{{ Carbon\Carbon::parse($item['tanggal'])->format('M') }}</span> <!-- Menampilkan bulan -->
+                            </br>
+                                <span>{{ Carbon\Carbon::parse($item['tanggal'])->format('j') }}</span> <!-- Menampilkan tanggal -->
                             </div>
                         </div>
                     </div>

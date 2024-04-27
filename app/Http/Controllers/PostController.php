@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use Illuminate\Support\Str;
+use Illuminate\Http\Request;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
-use Illuminate\Support\Str;
 
 
 class PostController extends Controller
@@ -27,6 +28,7 @@ class PostController extends Controller
             "title" => "index",
             "content" => Post::all(),
             "wisata" => Post::allwisata(),
+            
             
     ]);
     }
@@ -64,6 +66,21 @@ class PostController extends Controller
             
         ]);
     }
+
+    public function search(Request $request)
+    {
+        // Get the search results
+        $results = Post::search($request);
+
+        // Pass the search results to the view
+        return view('index', [
+            "title" => "index",
+            "content" => Post::all(),
+            "wisata" => Post::allwisata(),
+            'results' => $results,
+        ]);
+    }
+
 
     /**
      * Show the form for creating a new resource.

@@ -2,10 +2,11 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Str;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Support\Str;
 
 
 class Post 
@@ -64,6 +65,29 @@ class Post
 
     // return $hasil;
     return collect($databaseblog)->firstWhere('_id',$_id);
+    }
+
+    // Controller.php
+
+
+
+    public static function search($request)
+    {
+        // Make a request to your external API to perform the search
+        $keyword = $request->input('search');
+        $url = "https://ap-southeast-1.aws.data.mongodb-api.com/app/application-0-pkmqdbd/endpoint/adddatabyname?judul={$keyword}";
+        $response = Http::get($url);
+
+        if ($response->successful()) {
+            // If the request is successful, return the JSON response
+            return $response->json();
+        } else {
+            // If there's an error or no results, return an empty array
+            return [];
+        }
+    
+
+
     }
    
 }
