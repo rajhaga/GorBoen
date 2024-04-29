@@ -32,7 +32,12 @@
                      </h2>
                      
                      <p class="excert">
-                        {{ $post["detail_berita"] ? $post["detail_berita"] : '' }}
+                        @php
+                        $paragraphs = explode("\n", $post["detail_berita"]);
+                        foreach ($paragraphs as $paragraph) {
+                                echo "<p>$paragraph</p>";
+                        }
+                              @endphp
                      </p>
                </div>
             </div>

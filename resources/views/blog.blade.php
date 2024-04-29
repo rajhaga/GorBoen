@@ -35,7 +35,6 @@
                             <img src="{{ $imageSrc }}" alt="">                                
                             <a href="#" class="blog_item_date">
                                     <span>{{ Carbon\Carbon::parse($item['tanggal'])->format('F j') }}</span>
-                                    <p>Jan</p>
                                 </a>
                             </div>
 
