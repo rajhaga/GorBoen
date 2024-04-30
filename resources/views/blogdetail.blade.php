@@ -23,10 +23,10 @@
                   <div class="feature-img">
                      <div class="blog_item_img">
                         <?php             
-                        $imageSrc = 'data:image/png;base64,'. $post['gambar'];;
-                    ?>
+                        $imageSrc = 'data:image/png;base64,'. $post["gambar"];
+                        ?>
                             <img src="{{ $imageSrc }}" alt="">                                
-                           </div>
+                     </div>
                   <div class="blog_details">
                      <h2>{{ $post["judul"] ? $post["judul"] : '' }}
                      </h2>

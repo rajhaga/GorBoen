@@ -71,31 +71,34 @@
                 </div>
 
                 <div class="row">
-                    @foreach ($wisata as $item)
-
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <div class="single-place mb-30">
-                            <div class="place-img">
-                                <?php             
-                                    $imageSrc = 'data:image/png;base64,'. $item['gambar'];;
-                                ?>
-                                <img src="{{ $imageSrc }}" alt="">
-                            </div>
-                            <div class="place-cap">
-                                <div class="place-cap-top">
-                                    <span><i class="fas fa-star"></i><span>8.0 Superb</span> </span>
-                                    <h3><a href="#">{{$item["judul"] ? $item["judul"] : '' }}</a></h3>
+                    @php
+                        $wisataCollection = collect($wisata);
+                        $contentCollection = collect($content);
+                    @endphp 
+                    @foreach ($wisataCollection->slice(0, 6) as $item) <!-- Menggunakan metode slice() untuk membatasi jumlah item menjadi 6 -->
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="single-place mb-30">
+                                <div class="place-img">
+                                    <?php             
+                                        $imageSrc = 'data:image/png;base64,'. $item['gambar'];;
+                                    ?>
+                                    <img src="{{ $imageSrc }}" alt="">
                                 </div>
-                                <div class="place-cap-bottom">
-                                    <ul>
-                                        <li><i class="far fa-clock"></i>{{$item["Kontak"] ? $item["Kontak"] : '' }}</li>
-                                        <li><i class="fas fa-map-marker-alt"></i>Bogor</li>
-                                    </ul>
+                                <div class="place-cap">
+                                    <div class="place-cap-top">
+                                        <span><i class="fas fa-star"></i><span>8.0 Superb</span> </span>
+                                        <h3><a href="#">{{$item["judul"] ? $item["judul"] : '' }}</a></h3>
+                                    </div>
+                                    <div class="place-cap-bottom">
+                                        <ul>
+                                            <li><i class="far fa-clock"></i>{{$item["Kontak"] ? $item["Kontak"] : '' }}</li>
+                                            <li><i class="fas fa-map-marker-alt"></i>Bogor</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    @endforeach  
+                    @endforeach   
 
                 </div> 
             </div>
@@ -103,22 +106,7 @@
 
         <!-- Favourite Places End -->
         <!-- Video Start Arera -->
-        <div class="video-area video-bg pt-200 pb-200"  data-background="assets/img/service/video-bg.jpg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="video-caption text-center">
-                            <div class="video-icon">
-                                <a class="popup-video" href="https://www.youtube.com/watch?v=1aP-TXUpNoU" tabindex="0"><i class="fas fa-play"></i></a>
-                            </div>
-                            <p class="pera1">Love where you're going in the perfect time</p>
-                            <p class="pera2">Tripo is a World Leading Online</p>
-                            <p class="pera3"> Tour Booking Platform</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
         <!-- Video Start End -->
         <!-- Support Company Start-->
         <div class="mt-4">
@@ -193,8 +181,8 @@
                     </div>
                 </div>
                 <div class="row">
-                    @foreach ($content as $item)
-
+                    @foreach ($contentCollection->slice(0, 4) as $item) <!-- Menggunakan metode slice() untuk membatasi jumlah item menjadi 6 -->
+                   
                     <div class="col-xl-6 col-lg-6 col-md-6">
                         <div class="home-blog-single mb-30">
                             <div class="blog-img-cap">
@@ -209,12 +197,11 @@
                             </div>
                             <div class="blog-date text-center">
                                 <span>{{ Carbon\Carbon::parse($item['tanggal'])->format('M') }}</span> <!-- Menampilkan bulan -->
-                            </br>
+                                <br>
                                 <span>{{ Carbon\Carbon::parse($item['tanggal'])->format('j') }}</span> <!-- Menampilkan tanggal -->
                             </div>
                         </div>
                     </div>
-
                     @endforeach
 
                 </div>
@@ -223,4 +210,5 @@
         <!-- Blog Area End -->
 
     </main>
+    
     @endsection

@@ -55,7 +55,7 @@ class PostController extends Controller
     public function wisatadetail($_id){
         
         return view('wisatadetail', [
-            "post" => Post::allwisata($_id)
+            "post" => Post::findwisata($_id)
         ]);
 
     }

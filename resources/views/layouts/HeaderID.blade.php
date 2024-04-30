@@ -8,6 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="manifest" href="site.webmanifest">
 		<link rel="shortcut icon" type="/image/x-icon" href="/assets/img/favicon.ico">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
 
 		<!-- CSS here -->
         <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
@@ -22,12 +24,21 @@
         <link rel="stylesheet" href="/assets/css/nice-select.css">
         <link rel="stylesheet" href="/assets/css/style.css">
         <link rel="stylesheet" href="/assets/css/custom.css">
-        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <link rel="stylesheet" href="/qgis/css/leaflet.css">
+        <link rel="stylesheet" href="/qgis/css/qgis2web.css">
    </head>
-
+   <style>
+    .header {
+        position: fixed; /* Mengatur posisi header tetap */
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000; /* Z-index yang lebih tinggi dari elemen peta */
+        background-color: #ffffff; /* Warna latar belakang header */
+        /* Tambahan properti styling lainnya */
+    }
+    </style>
    <body>
-    @include('map.map')
     <!-- Preloader Start -->
     <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
@@ -40,7 +51,7 @@
         </div>
     </div>
     <!-- Preloader Start -->
-    <header>
+    <header class="z-index">
         <!-- Header Start -->
        <div class="header-area">
             <div class="main-header ">
@@ -50,7 +61,7 @@
                             <!-- Logo -->
                             <div class="col-xl-2 col-lg-2 col-md-1">
                                 <div class="logo">
-                                  <a href="index.html"><img src="/assets/img/logo/logo.png" alt=""></a>
+                                  <a href="/"><img src="/assets/img/logo/logo.png" alt=""></a>
                                 </div>
                             </div>
                             <div class="col-xl-10 col-lg-10 col-md-10">
@@ -173,7 +184,8 @@
 	
 		<!-- All JS Custom Plugins Link Here here -->
         <script src="/./assets/js/vendor/modernizr-3.5.0.min.js"></script>
-		
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
 		<!-- Jquery, Popper, Bootstrap -->
 		<script src="/./assets/js/vendor/jquery-1.12.4.min.js"></script>
         <script src="/./assets/js/popper.min.js"></script>
