@@ -1,7 +1,18 @@
 @extends('layouts.HeaderID')
 
 @section('main')
-
+<style>
+   .place-img img{
+       width: 370px; /* atur lebar gambar */
+       height: 324px;
+   }
+   
+   .blog_item_img img{
+       width: 800px; /* atur lebar gambar */
+       height: 500px;
+   }
+   
+   </style>
    <div class="slider-area ">
       <div class="single-slider slider-height2 d-flex align-items-center" data-background="/assets/img/hero/contact_hero.jpg">
           <div class="container">
@@ -39,81 +50,6 @@
                         }
                               @endphp
                      </p>
-               </div>
-            </div>
-            <div class="col-lg-4">
-               <div class="blog_right_sidebar">
-                  <aside class="single_sidebar_widget post_category_widget">
-                     <h4 class="widget_title">Category</h4>
-                     <ul class="list cat-list">
-                        <li>
-                           <a href="#" class="d-flex">
-                              <p>Resaurant food</p>
-                              <p>(37)</p>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#" class="d-flex">
-                              <p>Travel news</p>
-                              <p>(10)</p>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#" class="d-flex">
-                              <p>Modern technology</p>
-                              <p>(03)</p>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#" class="d-flex">
-                              <p>Product</p>
-                              <p>(11)</p>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#" class="d-flex">
-                              <p>Inspiration</p>
-                              <p>(21)</p>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#" class="d-flex">
-                              <p>Health Care</p>
-                              <p>(21)</p>
-                           </a>
-                        </li>
-                     </ul>
-                  </aside>
-                  
-                  <aside class="single_sidebar_widget tag_cloud_widget">
-                     <h4 class="widget_title">Tag Clouds</h4>
-                     <ul class="list">
-                        <li>
-                           <a href="#">project</a>
-                        </li>
-                        <li>
-                           <a href="#">love</a>
-                        </li>
-                        <li>
-                           <a href="#">technology</a>
-                        </li>
-                        <li>
-                           <a href="#">travel</a>
-                        </li>
-                        <li>
-                           <a href="#">restaurant</a>
-                        </li>
-                        <li>
-                           <a href="#">life style</a>
-                        </li>
-                        <li>
-                           <a href="#">design</a>
-                        </li>
-                        <li>
-                           <a href="#">illustration</a>
-                        </li>
-                     </ul>
-                  </aside>
                </div>
             </div>
          </div>

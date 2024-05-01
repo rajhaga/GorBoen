@@ -1,24 +1,14 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
-        <meta name="mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <link rel="stylesheet" href="qgis/css/leaflet.css">
-        <link rel="stylesheet" href="qgis/css/qgis2web.css"><link rel="stylesheet" href="qgis/css/fontawesome-all.min.css">
-        <style>
-        #map {
-            width: 837px;
-            height: 570px;
-        }
-        </style>
-        <title></title>
-    </head>
-    <body>
-        <div id="map">
+@extends('layouts.HeaderID')
+
+@section('main')
+        <div id="map-title">
+            <h2>Map Kebun Bogor</h2>
         </div>
+        <div id="map-container">
+            <div id="map"></div>
+        </div>
+
+        
         <script src="qgis/js/qgis2web_expressions.js"></script>
         <script src="qgis/js/leaflet.js"></script>
         <script src="qgis/js/leaflet.rotatedMarker.js"></script>
@@ -29,7 +19,67 @@
         <script src="qgis/js/labelgun.min.js"></script>
         <script src="qgis/js/labels.js"></script>
         <script src="qgis/data/kebunbogor_1.js"></script>
+        <style>
+            .card {
+                    width: 300px; /* Adjust card width as needed */
+                    border: 1px solid #ccc;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    overflow: hidden;
+                    transition: transform 0.3s ease;
+                    margin: 20px auto;
+                }
+        
+                .card:hover {
+                    transform: translateY(-5px);
+                }
+        
+                .card-image img {
+                    width: 100%;
+                    height: 200px; /* Adjust image height as needed */
+                    object-fit: cover;
+                }
+        
+                .card-content {
+                    padding: 20px;
+                }
+        
+                .card-title {
+                    font-size: 18px;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                }
+        
+                .card-info {
+                    font-size: 14px;
+                    line-height: 1.5;
+                }
+        
+            #map-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 50px 0;
+            }
+
+            #map {
+                width: 80%;
+                height: 600px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                margin-top: 20px;
+            }
+
+            #map-title {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            
+        </style>
         <script>
+
+        
             var map = L.map('map', {
                 zoomControl: true,
                 maxZoom: 28,
@@ -130,8 +180,6 @@
             bounds_group.addLayer(layer_kebunbogor_1);
             map.addLayer(layer_kebunbogor_1);
             setBounds();
-            map.setView([-6.630886088137839, 106.83139599479279], 15);
 
         </script>
-    </body>
-</html>
+   @endsection

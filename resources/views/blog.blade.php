@@ -1,7 +1,19 @@
 @extends('layouts.Header')
 
 @section('main')
-  
+<style>
+.place-img img{
+    width: 370px; /* atur lebar gambar */
+    height: 324px;
+}
+
+.blog_item_img img{
+    width: 570px; /* atur lebar gambar */
+    height: 369px;
+}
+
+</style>
+
      <!-- slider Area Start-->
      <div class="slider-area ">
         <!-- Mobile Menu -->

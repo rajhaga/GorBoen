@@ -73,8 +73,8 @@
                                             <li><a href="/">Home</a></li>
                                             {{-- <li><a href="/aboutus">About US</a></li> --}}
                                             <li><a href="/package">Kebun</a></li>
-                                            <li><a href="/blog">Blog</a>
-                                            </li>
+                                            <li><a href="/blog">Blog</a></li>
+                                            <li><a href="/map">Map</a></li>
                                             <li><a href="/contact">Contact Us</a></li>
                                         </ul>
                                     </nav>
@@ -184,6 +184,16 @@
 	<!-- JS here -->
        
 	
+        <script src="/qgis/js/qgis2web_expressions.js"></script>
+        <script src="/qgis/js/leaflet.js"></script>
+        <script src="/qgis/js/leaflet.rotatedMarker.js"></script>
+        <script src="/qgis/js/leaflet.pattern.js"></script>
+        <script src="/qgis/js/leaflet-hash.js"></script>
+        <script src="/qgis/js/Autolinker.min.js"></script>
+        <script src="/qgis/js/rbush.min.js"></script>
+        <script src="/qgis/js/labelgun.min.js"></script>
+        <script src="/qgis/js/labels.js"></script>
+        <script src="/qgis/data/kebunpg_1.js"></script>
 		<!-- All JS Custom Plugins Link Here here -->
         <script src="/./assets/js/vendor/modernizr-3.5.0.min.js"></script>
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>

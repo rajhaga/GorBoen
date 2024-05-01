@@ -25,6 +25,16 @@
 .result-item a:hover {
     background-color: #e9e9e9;
 }
+
+.place-img img{
+    width: 370px; /* atur lebar gambar */
+    height: 324px;
+}
+
+.blog-img img{
+    width: 570px; /* atur lebar gambar */
+    height: 369px;
+}
     </style>
 
     <main>
@@ -208,8 +218,12 @@
                         <div class="home-blog-single mb-30">
                             <div class="blog-img-cap">
                                 <div class="blog-img">
-                                    <img src="assets/img/blog/home-blog1.jpg" alt="">
+                                    <?php             
+                                        $imageSrc = 'data:image/png;base64,'. $item['gambar'];;
+                                    ?>
+                                    <img src="{{ $imageSrc }}" alt="">
                                 </div>
+                                
                                 <div class="blog-cap">
                                     <p> |   Traveling</p>
                                     <h3><a href="/content/{{ $item['_id'] }}">{{$item["judul"] ? $item["judul"] : '' }}</a></h3>

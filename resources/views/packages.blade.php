@@ -2,6 +2,19 @@
 
 @section('main')
 
+<style>
+    .place-img img{
+        width: 370px; /* atur lebar gambar */
+        height: 324px;
+    }
+    
+    .blog-img img{
+        width: 570px; /* atur lebar gambar */
+        height: 369px;
+    }
+    
+    </style>
+    
     <main>
         <!-- slider Area Start-->
         <div class="slider-area ">
@@ -38,8 +51,12 @@
                     <div class="col-xl-4 col-lg-4 col-md-6">
                         <div class="single-place mb-30">
                             <div class="place-img">
-                                <img src="assets/img/service/services1.jpg" alt="">
+                                <?php             
+                                    $imageSrc = 'data:image/png;base64,'. $item['gambar'];;
+                                ?>
+                                <img src="{{ $imageSrc }}" alt="">
                             </div>
+                            
                             <div class="place-cap">
                                 <div class="place-cap-top">
                                     <h3><a href="wisata/{{ $item['_id'] }}">{{$item["judul"] ? $item["judul"] : '' }}</a></h3>
