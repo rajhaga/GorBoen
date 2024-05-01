@@ -78,8 +78,6 @@
             
         </style>
         <script>
-
-        
             var map = L.map('map', {
                 zoomControl: true,
                 maxZoom: 28,
@@ -118,7 +116,6 @@
                 minNativeZoom: 0,
                 maxNativeZoom: 19
             });
-            layer_OpenStreetMap_0;
             map.addLayer(layer_OpenStreetMap_0);
         
             function pop_kebunbogor_1(feature, layer) {
@@ -180,6 +177,48 @@
             bounds_group.addLayer(layer_kebunbogor_1);
             map.addLayer(layer_kebunbogor_1);
             setBounds();
+        
+            if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function (position) {
+                        const userLatitude = position.coords.latitude;
+                        const userLongitude = position.coords.longitude;
+                        
+                        console.log("Latitude:", userLatitude);
+                        console.log("Longitude:", userLongitude);
+
+                        userLocationMarker = L.marker([userLatitude, userLongitude]).addTo(map);
+
+                        userLocationMarker.bindPopup("Lokasi Saya").openPopup();
+
+                        map.setView([userLatitude, userLongitude], 13);
+                    });
+                }
+
+            
+
+                function updateMapWithUserLocation() {
+                    if (navigator.geolocation) {
+                        navigator.geolocation.getCurrentPosition(function (position) {
+                            const userLatitude = position.coords.latitude;
+                            const userLongitude = position.coords.longitude;
+                            
+                            
+
+                            if (userLocationMarker) {
+                                map.removeLayer(userLocationMarker);
+                            }
+
+                            userLocationMarker = L.marker([userLatitude, userLongitude]).addTo(map);
+
+                            userLocationMarker.bindPopup("Lokasi Saya").openPopup();
+
+                            map.setView([userLatitude, userLongitude]);
+                        });
+                    }
+                }
+            interval(updateMapWithUserLocation,3000);
+
+            
 
         </script>
    @endsection
