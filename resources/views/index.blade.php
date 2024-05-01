@@ -2,6 +2,31 @@
 
 @section('main')
 
+<style>
+    .search-results {
+    margin-top: 20px;
+}
+
+.result-item {
+    margin-bottom: 10px;
+}
+
+.result-item a {
+    display: block;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.result-item a:hover {
+    background-color: #e9e9e9;
+}
+    </style>
+
     <main>
 
         <!-- slider Area Start-->
@@ -31,17 +56,24 @@
                                     </div>
                                 </form>
                                 <!-- Hasil pencarian -->
-                                <div class="search-results" >
+                                <div class="search-results">
                                     @if (!empty($results))
                                         <ul>
                                             @foreach ($results as $result)
-                                                <li>{{ $result['judul'] }}</li>
+                                                <li>
+                                                    <div class="result-item">
+                                                        <div class="result-info">
+                                                            <a href="wisata/{{ $result['_id'] }}" >{{ $result['judul'] }}</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
                                             @endforeach
                                         </ul>
                                     @else
                                         <p>Tidak ada hasil pencarian.</p>
                                     @endif
                                 </div>
+                                
                                 
                             </div>
                         </div>
@@ -86,8 +118,7 @@
                                 </div>
                                 <div class="place-cap">
                                     <div class="place-cap-top">
-                                        <span><i class="fas fa-star"></i><span>8.0 Superb</span> </span>
-                                        <h3><a href="#">{{$item["judul"] ? $item["judul"] : '' }}</a></h3>
+                                        <h3><a href="wisata/{{ $item['_id'] }}">{{$item["judul"] ? $item["judul"] : '' }}</a></h3>
                                     </div>
                                     <div class="place-cap-bottom">
                                         <ul>
@@ -126,19 +157,9 @@
                                 <div class="testimonial-caption ">
                                     <div class="testimonial-top-cap">
                                         <img src="assets/img/icon/testimonial.png" alt="">
-                                        <p>Logisti Group is a representative logistics operator providing full range of ser
-                                            of customs clearance and transportation worl.</p>
+                                        <p>Perkebunan bukan hanya tempat di mana tanaman tumbuh, tetapi juga jantung yang menghidupi komunitas, mewujudkan keberlanjutan lingkungan, dan menghubungkan kita kembali dengan alam.</p>
                                     </div>
-                                    <!-- founder -->
-                                    <div class="testimonial-founder d-flex align-items-center justify-content-center">
-                                        <div class="founder-img">
-                                            <img src="assets/img/testmonial/Homepage_testi.png" alt="">
-                                        </div>
-                                        <div class="founder-text">
-                                            <span>Jessya Inn</span>
-                                            <p>Co Founder</p>
-                                        </div>
-                                    </div>
+                                
                                 </div>
                             </div>
                             <!-- Single Testimonial -->
@@ -191,8 +212,8 @@
                                 </div>
                                 <div class="blog-cap">
                                     <p> |   Traveling</p>
-                                    <h3><a href="single-blog.html">{{$item["judul"] ? $item["judul"] : '' }}</a></h3>
-                                    <a href="single-blog.html" class="more-btn">Read more »</a>
+                                    <h3><a href="/content/{{ $item['_id'] }}">{{$item["judul"] ? $item["judul"] : '' }}</a></h3>
+                                    <a href="/content/{{ $item['_id'] }}" class="more-btn">Read more »</a>
                                 </div>
                             </div>
                             <div class="blog-date text-center">

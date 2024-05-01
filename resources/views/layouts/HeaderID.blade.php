@@ -26,6 +26,7 @@
         <link rel="stylesheet" href="/assets/css/custom.css">
         <link rel="stylesheet" href="/qgis/css/leaflet.css">
         <link rel="stylesheet" href="/qgis/css/qgis2web.css">
+        <link rel="stylesheet" href="/qgis/css/fontawesome-all.min.css">
    </head>
    <style>
     .header {
@@ -70,7 +71,7 @@
                                     <nav>               
                                         <ul id="navigation">                                                                                                                                     
                                             <li><a href="/">Home</a></li>
-                                            <li><a href="/aboutus">About US</a></li>
+                                            {{-- <li><a href="/aboutus">About US</a></li> --}}
                                             <li><a href="/package">Kebun</a></li>
                                             <li><a href="/blog">Blog</a>
                                             </li>
@@ -181,6 +182,7 @@
     </footer>
 
 	<!-- JS here -->
+       
 	
 		<!-- All JS Custom Plugins Link Here here -->
         <script src="/./assets/js/vendor/modernizr-3.5.0.min.js"></script>
