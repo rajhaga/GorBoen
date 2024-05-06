@@ -58,10 +58,14 @@
 
     /* CSS untuk peta */
     #map {
-        width: 400px;
-        height: 400px; /* Atur tinggi peta sesuai kebutuhan */
-        /* Tambahan properti styling lainnya */
-    }
+    width: 100%; /* Gunakan lebar penuh */
+    height: 400px; /* Sesuaikan tinggi peta sesuai kebutuhan */
+}
+
+.blog_item_img img {
+    width: 100%; /* Gunakan lebar penuh */
+    height: auto; /* Biarkan tinggi gambar menyesuaikan */
+}
     
 </style>
 <div class="slider-area ">
