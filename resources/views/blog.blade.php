@@ -63,7 +63,7 @@
                                                 echo "<p>" . substr($paragraph, 0, 600) . "...</p>";
                                                 $loop += 1;
                                             } else {
-                                                break; // Menghentikan loop setelah satu iterasi
+                                                break; 
                                             }
                                         }
                                     @endphp

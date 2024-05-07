@@ -36,8 +36,8 @@
         width: 100%;
         z-index: 1000; /* Z-index yang lebih tinggi dari elemen peta */
         background-color: #ffffff; /* Warna latar belakang header */
-        /* Tambahan properti styling lainnya */
     }
+    
     </style>
    <body>
     <!-- Preloader Start -->
@@ -52,7 +52,7 @@
         </div>
     </div>
     <!-- Preloader Start -->
-    <header class="z-index">
+    <header>
         <!-- Header Start -->
        <div class="header-area">
             <div class="main-header ">

@@ -1,6 +1,68 @@
 @extends('layouts.HeaderID')
 
 @section('main')
+<style>
+            
+
+    .card {
+            width: 300px; /* Adjust card width as needed */
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            margin: 20px auto;
+        }
+
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 200px; /* Adjust image height as needed */
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .card-info {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+    #map-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 0;
+        
+    }
+
+    #map {
+        width: 80%;
+        height: 600px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+    }
+
+    #map-title {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+</style>
         <div id="map-title">
             <h2>Map Kebun Bogor</h2>
         </div>
@@ -19,64 +81,7 @@
         <script src="qgis/js/labelgun.min.js"></script>
         <script src="qgis/js/labels.js"></script>
         <script src="qgis/data/kebunbogor_1.js"></script>
-        <style>
-            .card {
-                    width: 300px; /* Adjust card width as needed */
-                    border: 1px solid #ccc;
-                    border-radius: 8px;
-                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                    overflow: hidden;
-                    transition: transform 0.3s ease;
-                    margin: 20px auto;
-                }
         
-                .card:hover {
-                    transform: translateY(-5px);
-                }
-        
-                .card-image img {
-                    width: 100%;
-                    height: 200px; /* Adjust image height as needed */
-                    object-fit: cover;
-                }
-        
-                .card-content {
-                    padding: 20px;
-                }
-        
-                .card-title {
-                    font-size: 18px;
-                    font-weight: bold;
-                    margin-bottom: 10px;
-                }
-        
-                .card-info {
-                    font-size: 14px;
-                    line-height: 1.5;
-                }
-        
-            #map-container {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 50px 0;
-            }
-
-            #map {
-                width: 80%;
-                height: 600px;
-                border: 1px solid #ccc;
-                border-radius: 8px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                margin-top: 20px;
-            }
-
-            #map-title {
-                text-align: center;
-                margin-bottom: 20px;
-            }
-            
-        </style>
         <script>
             var map = L.map('map', {
                 zoomControl: true,
@@ -217,8 +222,6 @@
                     }
                 }
             interval(updateMapWithUserLocation,3000);
-
-            
 
         </script>
    @endsection

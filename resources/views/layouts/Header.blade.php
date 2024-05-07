@@ -23,7 +23,17 @@
             <link rel="stylesheet" href="/assets/css/style.css">
             <link rel="stylesheet" href="/assets/css/custom.css">
    </head>
-
+   <style>
+    .header {
+        position: fixed; /* Mengatur posisi header tetap */
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000; /* Z-index yang lebih tinggi dari elemen peta */
+        background-color: #ffffff; /* Warna latar belakang header */
+        /* Tambahan properti styling lainnya */
+    }
+    </style>
    <body>
     <!-- Preloader Start -->
     <div id="preloader-active">
