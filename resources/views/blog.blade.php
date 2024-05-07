@@ -54,7 +54,22 @@
                                 <a class="d-inline-block" href="/content/{{ $item['_id'] }}">
                                     <h2>{{$item["judul"] ? $item["judul"] : '' }}</h2>
                                 </a>
-                                <p>{{ substr($item['detail_berita'], 0, 300) }}...</p>
+                                <p class="excert">
+                                    @php
+                                        $paragraphs = explode("\n", $item['detail_berita']);
+                                        $loop = 1;
+                                        foreach ($paragraphs as $paragraph) {
+                                            if ($loop == 1) {
+                                                echo "<p>" . substr($paragraph, 0, 600) . "...</p>";
+                                                $loop += 1;
+                                            } else {
+                                                break; // Menghentikan loop setelah satu iterasi
+                                            }
+                                        }
+                                    @endphp
+                                    
+                                </p>
+                                
                                 
                             </div>
                         </article>

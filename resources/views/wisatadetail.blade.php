@@ -49,25 +49,25 @@
             line-height: 1.5;
         }
 
-    /* CSS untuk kontainer peta */
-    #map-container {
-        position: relative; /* Pastikan kontainer peta berada dalam alur dokumen */
-        z-index: 99; /* Z-index yang lebih rendah dari header */
-        /* Tambahan properti styling lainnya */
-    }
+        #map-container {
+            position: relative; 
+            z-index: 99; 
+            
+        }
 
-    /* CSS untuk peta */
-    #map {
-    width: 100%; /* Gunakan lebar penuh */
-    height: 400px; /* Sesuaikan tinggi peta sesuai kebutuhan */
-}
+        #map {
+        width: 100%; 
+        height: 400px;
+        }
 
-.blog_item_img img {
-    width: 100%; /* Gunakan lebar penuh */
-    height: auto; /* Biarkan tinggi gambar menyesuaikan */
-}
+        .blog_item_img img {
+            width: 100%; 
+            height: auto; 
+        }
     
 </style>
+
+
 <div class="slider-area ">
     <div class="single-slider slider-height2 d-flex align-items-center" data-background="/assets/img/hero/contact_hero.jpg">
         <div class="container">
