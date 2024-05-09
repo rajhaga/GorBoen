@@ -34,7 +34,7 @@
                   <div class="feature-img">
                      <div class="blog_item_img">
                         <?php             
-                        $imageSrc = 'data:image/png;base64,'. $post["gambar"];
+                        $imageSrc = $post["gambar"];
                         ?>
                             <img src="{{ $imageSrc }}" alt="">                                
                      </div>

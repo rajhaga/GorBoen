@@ -42,7 +42,7 @@
                         <article class="blog_item">
                             <div class="blog_item_img">
                                 <?php             
-                                $imageSrc = 'data:image/png;base64,'. $item['gambar'];;
+                                $imageSrc = $item['gambar'];;
                             ?>
                             <img src="{{ $imageSrc }}" alt="">                                
                             <a href="#" class="blog_item_date">

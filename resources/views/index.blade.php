@@ -122,7 +122,7 @@
                             <div class="single-place mb-30">
                                 <div class="place-img">
                                     <?php             
-                                        $imageSrc = 'data:image/png;base64,'. $item['gambar'];;
+                                        $imageSrc = $item['gambar'];;
                                     ?>
                                     <img src="{{ $imageSrc }}" alt="">
                                 </div>
@@ -219,7 +219,7 @@
                             <div class="blog-img-cap">
                                 <div class="blog-img">
                                     <?php             
-                                        $imageSrc = 'data:image/png;base64,'. $item['gambar'];;
+                                        $imageSrc = $item['gambar'];;
                                     ?>
                                     <img src="{{ $imageSrc }}" alt="">
                                 </div>

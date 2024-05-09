@@ -89,7 +89,7 @@
                 <div class="single-post"> 
                     <div class="blog_item_img">
                         <?php             
-                        $imageSrc = 'data:image/png;base64,'. $post["gambar"];
+                        $imageSrc = $post["gambar"];
                         ?>
                         <img src="{{ $imageSrc }}" alt="">                                
                     </div>
