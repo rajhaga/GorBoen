@@ -49,6 +49,15 @@
     .green6 {
         background-color: #2C8735;
     }
+
+    .img-style {
+    display: block;
+    margin: auto; /* Untuk posisi gambar di tengah */
+    border-radius: 10px; /* Untuk sudut gambar yang bulat */
+    max-width: 100%; /* Gambar tidak melebihi lebar kontainer */
+    height: auto; /* Gambar disesuaikan tingginya sesuai aspek ratio */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Efek bayangan untuk gambar */
+}
 </style>
 <body>
     <div class="slider-area">
@@ -70,9 +79,7 @@
     <section class="contact-section">
         <div class="container">
             <div class="d-none d-sm-block mb-5 pb-4">
-                <a href="https://akunmediasosialanda1">
-                    <img src="path/to/group-photo.jpg" alt="Group Photo">
-                </a>
+                <img src="assets/img/gallery/IMG_1064.PNG" alt="Group Photo" class="img-style">
             </div>
             <button class="button green1">Rajhaga Jevanya Meliala</button>
             <button class="button green2">Mia Putri Yeza</button>
