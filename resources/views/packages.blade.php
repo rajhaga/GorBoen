@@ -40,7 +40,6 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-tittle text-center">
-                            <span>FEATURED TOURS Packages</span>
                             <h2>Favourite Places</h2>
                         </div>
                     </div>

@@ -206,9 +206,6 @@
                         navigator.geolocation.getCurrentPosition(function (position) {
                             const userLatitude = position.coords.latitude;
                             const userLongitude = position.coords.longitude;
-                            
-                            
-
                             if (userLocationMarker) {
                                 map.removeLayer(userLocationMarker);
                             }
